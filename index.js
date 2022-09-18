@@ -1,7 +1,7 @@
 const { default: axios } = require('axios')
 const express = require('express')
 const app = express()
-const port = 443
+const port = process.env.PORT|| 3000
 
 app.get('/get-questions', async (req, res) => {
     const questionNum = req.query.questionNum
