@@ -1,7 +1,7 @@
 const { default: axios } = require('axios')
 const express = require('express')
 const app = express()
-const port = process.env.PORT|| 3000
+const PORT = process.env.PORT || 3030;
 
 app.get('/get-questions', async (req, res) => {
     const questionNum = req.query.questionNum
@@ -20,6 +20,6 @@ app.get('/get-questions', async (req, res) => {
 
 })
 
-app.listen(port, () => {
-    console.log(`app listening on port ${port}`)
+app.listen(PORT, () => {
+    console.log(`app listening on port ${PORT}`)
 })
