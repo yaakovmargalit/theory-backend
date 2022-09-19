@@ -1,7 +1,9 @@
 const { default: axios } = require('axios')
 const express = require('express')
+var cors = require('cors')
 const app = express()
 const PORT = process.env.PORT || 3030;
+app.use(cors())
 
 app.get('/get-questions', async (req, res) => {
     const questionNum = req.query.questionNum
