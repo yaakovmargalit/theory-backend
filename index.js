@@ -72,7 +72,7 @@ app.get('/question/:num', async (req, res) => {
 
 // app.get('/new-hhh', async (req, res) => {
 //     let final = {}
-//     for (let i = 714; i < 1850; i++) {
+//     for (let i = 714; i < 2000; i++) {
 //         const q = await Question.find({ questionNumber: i })
 //         let data = q[0];
 //         final.questionNumber = data["questionNumber"]
@@ -93,6 +93,19 @@ app.get('/question/:num', async (req, res) => {
 //             );
 //         }
 //         final.imageSrc = src
+//         let rank = answers.slice(answers.indexOf('left'),answers.indexOf('</span></div></div>'),)
+//         let ranks=[]
+//         for (let v = 0; v < rank.length; v++) {
+//             let startRank=rank.indexOf('«')
+//             let endRank=rank.indexOf('»')
+//             if(startRank!==-1&&endRank!==-1){
+//                 ranks.push(rank.slice(startRank+1,endRank))
+//                 rank=rank.slice(endRank+1,rank.length)
+//                 // console.log(rank);
+//             }
+           
+//         }
+//         final.ranks=ranks
 //         for (let j = 0; j < 4; j++) {
 //             const startLi = ul.indexOf('<li>');
 //             const endLi = ul.indexOf('</li>');

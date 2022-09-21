@@ -13,6 +13,10 @@ const ProblemSchema = mongoose.Schema({
         type: Array,
         require: false
     },
+    ranks: {
+        type: Array,
+        require: false
+    },
     correctAnswer: {
         type: Number,
         require: false
